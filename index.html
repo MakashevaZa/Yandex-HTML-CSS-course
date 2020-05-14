@@ -13,8 +13,8 @@
         <meta property="og:type" content="article">
         <meta property="og:site_name" content="Блог компании Яндекс">
         <meta property="og:url" content="https://yandex.ru/blog">
+        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
-
     <body itemscope itemtype="http://schema.org/BreadcrumbList">
     <header id="page-header"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
         <a  itemprop="item" href="https://yandex.ru/blog/company" >
@@ -25,14 +25,15 @@
         <meta itemprop="position" content="1" />
     </header>    
     <main>
-        
         <article itemscope itemtype="http://schema.org/LiveBlogPosting">
             <header id="article-header">
                 <h1 itemprop="name">
-                    <span itemprop="about" >
-                        <span itemscope itemtype="https://schema.org/Service">
-                            <a href="mail.yandex.ru" itemprop="name">ЯНДЕКС.ПОЧТА</a>
-                        </span>
+                    <span itemprop="about" itemscope itemtype="https://schema.org/Service">
+                        
+                            <a href="mail.yandex.ru" itemprop="name">
+                            ЯНДЕКС.ПОЧТА
+                            </a>
+                        
                     </span>: КАК МЫ ИЗМЕРЯЕМ СКОРОСТЬ ЗАГРУЗКИ И УЛУЧШАЕМ ЕЁ
                 </h1>
                 
@@ -44,7 +45,6 @@
                     и новая логика. Всё это напрямую влияет на скорость работы интерфейса.
                 </p>
             </header>
-
             <span itemprop="articleBody">
             <section>
                 <h1>Что мы измеряем</h1>
@@ -88,10 +88,27 @@
                     время показа страницы попало в него, то пользователь счастлив. Берем еще один
                     интервал, (t; 4t] (в четыре раза больше первого), и считаем, что если страница
                     показана за это время, то пользователь в целом удовлетворен скоростью работы,
-                    но уже не настолько счастлив. И применяем формулу:
-                    
-                    (кол-во счастливых пользователей + кол-во удовлетворенных / 2) / (кол-во всех).
-
+                    но уже не настолько счастлив. И применяем формулу: </p>
+                    <p>
+                    <math>
+                        <mrow><mfrac> 
+                        <mrow>
+                            <mtext>кол-во счастливых пользователей</mtext> 
+                            <mo>+</mo>
+                            <mfrac>
+                            <mtext>кол-во удовлетворенных</mtext> 
+                            <mn>2</mn>    
+                        </mfrac>
+                        </mrow>
+                        <mrow>
+                            <mtext>кол-во всех</mtext>
+                        </mrow>
+                    </mfrac>
+                </mrow>
+                </math>
+                </p>
+                
+                <p>
                     Получается значение от нуля до единицы, которое, видимо, лучше всего показывает,
                     хорошо или плохо работает почта.
                 </p>
@@ -123,7 +140,6 @@
                 </p>
                 </div>
             </section>
-
             <section>
                 <h1>Как мы ускоряем</h1>
                 <div>
@@ -208,11 +224,161 @@
             </p>
             <p>
                 <blockquote>
-                Алгоритм Бройдена — Флетчера — Гольдфарба — Шанно (BFGS)
+                <p>Алгоритм Бройдена — Флетчера — Гольдфарба — Шанно (BFGS)
                 — итерационный метод численной оптимизации, предназначенный для
                 нахождения локального максимума/минимума нелинейного функционала
-                без ограничений.
-                </blockquote>
+                без ограничений.</p>
+                
+                <p>
+                дано <math>
+                    <mi>&epsilon;</mi>
+                    <mo>, </mo>
+                    <msub>
+                        <mi>x</mi>
+                        <mn>0</mn>
+                    </msub>
+                </math><br>
+                инициализировать <math>
+                    <msub>
+                        <mi>H</mi>
+                        <mn>0</mn>
+                    </msub>
+                </math><br>
+                <math>
+                    <mi>k</mi>
+                    <mo>=</mo>
+                    <mn>0</mn>
+                </math><br>
+                <strong>while</strong> <math>
+                    <mrow>
+                        <mfenced separators="" open="||" close="||">
+                            <mi>&nabla;</mi>                            
+                            <msub>
+                                <mi>f</mi>
+                                <mi>k</mi>
+                            </msub>
+                        </mfenced> 
+                        <mo>></mo>
+                        <mi>&epsilon;</mi>
+                </mrow>
+                </math> <br>
+                    найти направление <math>
+                        <mrow>                            
+                            <msub>
+                                <mi>p</mi>
+                                <mi>k</mi>
+                            </msub>
+                            <mo>=</mo>
+                            <mo>-</mo>                            
+                            <msub>
+                                <mi>C</mi>
+                                <mi>k</mi>
+                            </msub>
+                            <mi>&nabla;</mi>                            
+                            <msub>
+                                <mi>f</mi>
+                                <mi>k</mi>
+                            </msub>
+                        </mrow>
+                    </math><br>
+                    вычислить <math>
+                        <mrow>                            
+                            <msub>
+                                <mi>x</mi>
+                                <mrow>
+                                <mi>k</mi>
+                                <mo>+</mo>
+                                <mn>1</mn>
+                                </mrow>
+                            </msub>
+                            <mo>=</mo>                            
+                            <msub>    
+                                <mi>x</mi>                        
+                                <mi>k</mi>
+                            </msub>
+                            <mo>+</mo>                            
+                            <msub>
+                                <mi>&alpha;</mi>
+                                <mi>k</mi>
+                            </msub>                            
+                            <msub>
+                                <mi>p</mi>
+                                <mi>k</mi>
+                            </msub>
+                       <mtext>, </mtext>
+                       <msub>
+                           <mi>&alpha;</mi> 
+                           <mi>k</mi> 
+                        </msub>
+                    </mrow>
+                    </math> удовлетворяет условиям Вольфе <br>
+                    обозначить <math>
+                        <mrow>
+                            <msub>
+                                <mi>s</mi>
+                                <mi>k</mi>
+                            </msub>
+                            <mo>=</mo>
+                            <msub>
+                                <mi>x</mi>
+                                <mrow>
+                                    <mi>k</mi>
+                                    <mo>+</mo>
+                                    <mn>1</mn>
+                                </mrow>
+                            </msub>
+                                <mo>-</mo>
+                                <msub>
+                                    <mi>x</mi>
+                                    <mi>k</mi>
+                                </msub>                                
+                            
+                        </mrow>
+                    </math> и <math>
+                        <mrow>
+                            <msub>
+                                <mi>y</mi>
+                                <mi>k</mi>                                
+                            </msub>
+                            <mo>=</mo>
+                            <mi>&nabla;</mi>                            
+                            <msub>
+                                <mi>f</mi>
+                                <mrow>
+                                    <mi>k</mi>
+                                    <mo>+</mo>
+                                    <mn>1</mn>
+                                </mrow>                                
+                            </msub>
+                            <mo>-</mo>
+                            <mi>&nabla;</mi>                            
+                            <msub>
+                                <mi>f</mi>
+                                <mi>k</mi>                              
+                            </msub>
+                        </mrow>
+                    </math> <br>
+                    вычислить <math>
+                        <msub>
+                            <mi>C</mi>
+                            <mrow>
+                                <mi>k</mi>
+                                <mo>+</mo>
+                                <mn>1</mn>
+                            </mrow>
+                        </msub>                        
+                    </math> <br>
+                <math>
+                    <mi>k</mi>
+                    <mo>=</mo>
+                    <mi>k</mi>
+                    <mo>+</mo>
+                    <mn>1</mn>
+                </math> <br>
+                <strong>end</strong> 
+            </p>
+                
+            </blockquote>             
             </p>
             <p>
                 Почему именно алгоритм Флетчера, а не другие популярные алгоритмы вроде:
@@ -226,7 +392,6 @@
                 Потому что он быстрый, компактный и легок в реализации.
             </p>
             </div>
-
             </section>
             <section>
                 <h1>Итог</h1>
@@ -260,7 +425,6 @@
             </div>
             </section>
             </span>
-
             <span itemprop="author" itemscope itemtype="https://schema.org/Person">
             <footer id="article-footer">
                 Автор: <span itemprop="name">@doochik</span><br>
@@ -269,9 +433,7 @@
                 Компания: <span itemprop="worksFor">Яндекс</span><br>
             </footer>
             </span>
-
         </article>
-
         <div id="comments-section">
             <header id="comments-section-header">Комментарии (3):</header>
             <section id="comments-form"></section>
@@ -306,6 +468,7 @@
         </section>
         </div>
     </main>
+    
     <footer itemscope itemtype="http://schema.org/Organization">&copy; 
         <span itemprop="name">Яндекс</span>, 
         <span itemprop="email">help@yandex.ru</span>, 
