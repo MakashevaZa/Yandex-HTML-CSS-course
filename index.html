@@ -2,16 +2,41 @@
 <html lang ="ru">
     <head>
         <meta charset="UTF-8">
-        <title>Блог компании Яндекс</title>
+        <title>ЯНДЕКС.ПОЧТА: КАК МЫ ИЗМЕРЯЕМ СКОРОСТЬ ЗАГРУЗКИ И УЛУЧШАЕМ ЕЁ | Блог компании Яндекс</title>
+        <meta property="og:title" content="ЯНДЕКС.ПОЧТА: КАК МЫ ИЗМЕРЯЕМ СКОРОСТЬ ЗАГРУЗКИ И УЛУЧШАЕМ ЕЁ">
+        <meta property="og:description" content="Если ваш сайт медленно грузится, вы рискуете тем, что люди не оценят ни то,
+        какой он красивый, ни то, какой он удобный. Никому не понравится, когда все
+        тормозит. Мы регулярно добавляем в Яндекс.Почту новую функциональность,
+        иногда — исправляем ошибки, а это значит, у нас постоянно появляются новый код
+        и новая логика. Всё это напрямую влияет на скорость работы интерфейса.">
+        <meta property="og:image" content="https://images.app.goo.gl/JpfeLPvmv6Zs36uu9">
+        <meta property="og:type" content="article">
+        <meta property="og:site_name" content="Блог компании Яндекс">
+        <meta property="og:url" content="https://yandex.ru/blog">
     </head>
-    <body>
-    <header id="page-header">Блог компании Яндекс.</header>    
+
+    <body itemscope itemtype="http://schema.org/BreadcrumbList">
+    <header id="page-header"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a  itemprop="item" href="https://yandex.ru/blog/company" >
+            <span itemprop="name">
+             Блог компании Яндекс</span>.
+            </span>
+        </a>
+        <meta itemprop="position" content="1" />
+    </header>    
     <main>
         
-        <article>
+        <article itemscope itemtype="http://schema.org/LiveBlogPosting">
             <header id="article-header">
-                <h1>ЯНДЕКС.ПОЧТА: КАК МЫ ИЗМЕРЯЕМ СКОРОСТЬ ЗАГРУЗКИ И УЛУЧШАЕМ ЕЁ</h1>
-                <p>
+                <h1 itemprop="name">
+                    <span itemprop="about" >
+                        <span itemscope itemtype="https://schema.org/Service">
+                            <a href="mail.yandex.ru" itemprop="name">ЯНДЕКС.ПОЧТА</a>
+                        </span>
+                    </span>: КАК МЫ ИЗМЕРЯЕМ СКОРОСТЬ ЗАГРУЗКИ И УЛУЧШАЕМ ЕЁ
+                </h1>
+                
+                <p itemprop="description">
                     Если ваш сайт медленно грузится, вы рискуете тем, что люди не оценят ни то,
                     какой он красивый, ни то, какой он удобный. Никому не понравится, когда все
                     тормозит. Мы регулярно добавляем в Яндекс.Почту новую функциональность,
@@ -19,7 +44,8 @@
                     и новая логика. Всё это напрямую влияет на скорость работы интерфейса.
                 </p>
             </header>
-            
+
+            <span itemprop="articleBody">
             <section>
                 <h1>Что мы измеряем</h1>
                 <div>
@@ -233,13 +259,16 @@
             </p>
             </div>
             </section>
-            
+            </span>
+
+            <span itemprop="author" itemscope itemtype="https://schema.org/Person">
             <footer id="article-footer">
-                Автор: @doochik <br>
-                С++ разработик <br>
-                Электронная почта: (doochik@yandex-team.ru) <br>
-                Компания: Яндекс <br>
+                Автор: <span itemprop="name">@doochik</span><br>
+                <span itemprop="jobTitle"> С++ разработчик </span><br>
+                Электронная почта:(<span itemprop="email">doochik@yandex-team.ru</span>) <br>
+                Компания: <span itemprop="worksFor">Яндекс</span><br>
             </footer>
+            </span>
 
         </article>
 
@@ -248,18 +277,18 @@
             <section id="comments-form"></section>
             <section id="comments">
             <div class="comment">
-                <header class="comment-header">Mogaika (mogaika@yandex-team.ru) 30 ноября 2014 в 17:05</header>
+                <header class="comment-header">Mogaika (mogaika@yandex-team.ru) <time datetime="2014-11-30T17:05">30 ноября 2014 в 17:05</time></header>
                 <div class="comment-body">А можете привести сравнение, на сколько быстрее грузится lite версия?</div>
                 <footer class="comment-footer"><a class="comment-reply" href="#comments-form">Ответить</a></footer>  
             </div>
             <div class="comment">
-                <header class="comment-header">JIguse (mrawesome@yandex.ru) 29 ноября 2014 в 21:30</header>
+                <header class="comment-header">JIguse (mrawesome@yandex.ru) <time datetime="2014-11-29T21:30">29 ноября 2014 в 21:30</time></header>
                 <div class="comment-body">Спасибо за статью, познавательно. Здорово, что Яндекс делится некоторыми
                     подробностями о внутренней работе сервисов.</div>
                 <footer class="comment-footer"><a class="comment-reply" href="#comments-form">Ответить</a></footer>  
             </div>
             <div class="comment">
-                <header class="comment-header">Brister (brist89@yandex-team.ru) 24 ноября 2014 в 13:13</header>
+                <header class="comment-header">Brister (brist89@yandex-team.ru) <time datetime="2014-11-24T13:13">24 ноября 2014 в 13:13</time></header>
                 <div class="comment-body">
                     <blockquote>(кол-во счастливых пользователей + кол-во удовлетворенных / 2) / (кол-во всех).
                     Получается значение от нуля до единицы, которое, видимо, лучше всего показывает,
@@ -270,13 +299,20 @@
                 <footer class="comment-footer"><a class="comment-reply" href="#comments-form">Ответить</a></footer>  
             </div>
             <div class="comment">
-                <header class="comment-header">alexeimois (test@yandex.ru) 22 ноября 2014 в 17:35</header>
+                <header class="comment-header">alexeimois (test@yandex.ru) <time datetime="2014-11-22T17:35">22 ноября 2014 в 17:35</time></header>
                 <div class="comment-body">Мы измеряем скорость загрузки с помощью Яндекс.Метрики:<br> help.yandex.ru/metrika/reports/monitoring_timing.xml</div>
                 <footer class="comment-footer"><a class="comment-reply" href="#comments-form">Ответить</a></footer>                
             </div>
         </section>
         </div>
     </main>
-    <footer>© Яндекс, help@yandex.ru, Хохрякова, 10</footer>
-    </body>
+    <footer itemscope itemtype="http://schema.org/Organization">&copy; 
+        <span itemprop="name">Яндекс</span>, 
+        <span itemprop="email">help@yandex.ru</span>, 
+        <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <span itemprop="streetAddress">Хохрякова, 10</span>
+        </span>
+    </footer>
+    
+</body>
 </html>
