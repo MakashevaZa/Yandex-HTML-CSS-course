@@ -85,7 +85,7 @@ body
 
 .header__weather-title
 {
-    font-family: Space Mono, sans-serif;
+    font-family: 'Space Mono', 'Open Sans', sans-serif;
     font-size: 1.17em;
     text-align: center;
     margin: 0;
@@ -101,7 +101,7 @@ body
 
 .header__title
 {
-    font-family: Chomsky;
+    font-family: Chomsky, 'Times New Roman', Times, serif;
     overflow: visible;
     text-align: center;
     font-size: 85px;
