@@ -11,8 +11,11 @@
         <p>Выделите ссылки на скачивание zip-файлов</p>
 
         <main class="global-results">
+            
             <style>
-                /* ваш код здесь... */
+                [href$=".zip"]::after, [download]{
+                  content: " ↓";
+                }
             </style>
 
             <section class="global-result">
