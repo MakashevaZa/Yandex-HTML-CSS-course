@@ -5,55 +5,178 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="murrrket.css" type="text/css">
+    <link rel="stylesheet" href="fontello/css/fontello.css">
 </head>
 <body>
-    <div class="back-opacity">
     <header>
         
-            <h1>Добро пожаловать на Mяндекс.Murrrket!</h1>
+            <h1>Добро пожаловать на <div id="mya">Mяндекс.Murrrket!</div></h1>
             <p>Здесь вы сможете воочию узреть котиков, 
                 ожидающих стать вашим лучшим другом и 
                 сделать вашу жизнь раем на земле! 
             </p>
-        
+            
     </header>
 
     <main>
+        
+        <p>Тип представления</p>
+        <input class=listing type=radio id=plitka name=cats checked value="plitka">
+        <label class="label-for-listing plitka" for=plitka>  </label>
+        <input class=listing type=radio id=list name=cats value="list">
+        <label class="label-for-listing list" for=list></label> <br>
+        
+
         <section>
-            <img src="cat1.jpg">
+            <div class="image_container"><img src="cat1.jpg" alt=""></div>
+            <div class="shortDescr">
+                <div class="name">Анаксимандр</div>
+                <div class="category">Шустрые короткошерстные</div>
+                <div class="Uroven">Уровень доброты
+                    <div class="card-rating">
+                        <div class="card-rating_wrap">
+                        <input class="card-rating_input visually-hidden" type="radio" name="rating1" id="1rating-10" value="10">
+                        <label class="card-rating_label icon-star full" for="1rating-10" title="5 stars"></label>
+                        <input class="card-rating_input visually-hidden" type="radio" name="rating1" id="1rating-9" value="9">
+                        <label class="card-rating_label icon-star half" for="1rating-9" title="4 1/2 stars"></label>
+                        <input class="card-rating_input visually-hidden" type="radio" name="rating1" id="1rating-8" value="8">
+                        <label class="card-rating_label icon-star full" for="1rating-8" title="4 stars"></label>
+                        <input class="card-rating_input visually-hidden" type="radio" name="rating1" id="1rating-7" value="7">
+                        <label class="card-rating_label icon-star half" for="1rating-7" title="3 1/2 stars"></label>
+                        <input class="card-rating_input visually-hidden" type="radio" name="rating1" id="1rating-6" value="6">
+                        <label class="card-rating_label icon-star full" for="1rating-6" title="3 stars"></label>
+                        <input class="card-rating_input visually-hidden" type="radio" name="rating1" id="1rating-5" value="5">
+                        <label class="card-rating_label icon-star half" for="1rating-5" title="2 1/2 stars"></label>
+                        <input class="card-rating_input visually-hidden" type="radio" name="rating1" id="1rating-4" value="4">
+                        <label class="card-rating_label icon-star full" for="1rating-4" title="2 stars"></label>
+                        <input class="card-rating_input visually-hidden" type="radio" name="rating1" id="1rating-3" value="3">
+                        <label class="card-rating_label icon-star half" for="1rating-3" title="1 1/2 star"></label>
+                        <input class="card-rating_input visually-hidden" type="radio" name="rating1" id="1rating-2" value="2">
+                        <label class="card-rating_label icon-star full" for="1rating-2" title="1 star"></label>
+                        <input class="card-rating_input visually-hidden" type="radio" name="rating1" id="1rating-1" value="1">
+                        <label class="card-rating_label icon-star half" for="1rating-1" title="1/2 star"></label>
+                        </div>
+                    </div>
+                </div>
+                <div>cost</div>
+            </div>
+            <div class="longDescr"><p>Созерцание непредсказуемо. Согласно мнению известных философов, дедуктивный метод естественно порождает и обеспечивает мир, tertium nоn datur. Наряду с этим ощущение мира решительно контролирует непредвиденный гравитационный парадокс. Структурализм абстрактен. Созерцание непредсказуемо.</p>
+
+            </div>
         </section>
+
         <section>
-            <img src="cat2.jpg">
+            <div class="image_container"><img src="cat2.jpg" alt=""></div>
+            <div class="shortDescr">
+                <div class="name">Мишель де Монте́нь, который все время пытается спрятаться</div>
+                <div class="category">Пучеглазые</div>
+                <div>Stars</div>
+                <div>cost</div>
+            </div>
+            <div class="longDescr"><p>Товарищи! консультация с широким активом позволяет выполнять важные задания по разработке систем массового участия. Равным образом рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+                <p>Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности позволяет оценить значение новых предложений. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.</p></div>
         </section>
+        
         <section>
-            <img src="cat3.jpg">
+            <div class="image_container"><img src="cat3.jpg" alt=""></div>
+            <div class="shortDescr">
+                <div>Шарль Монтескьё</div>
+                <div class="category">Тугие</div>
+                <div>Stars</div>
+                <div>cost</div>
+            </div>
+            <div class="longDescr"><p>Равным образом постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. Повседневная практика показывает, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.</p></div>
         </section>
+        
         <section>
-            <img src="cat4.jpeg">
+            <div class="image_container"><img src="cat4.jpeg" alt=""></div>
+            <div class="shortDescr">
+                <div>Зенон из Китиона </div>
+                <div class="category">Коротколапые</div>
+                <div>Stars</div>
+                <div>cost</div>
+            </div>
+            <div class="longDescr"><p>Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.</p></div>
         </section>
+        
         <section>
-            <img src="cat5.jfif">
+            <div class="image_container"><img src="cat5.jfif" alt=""></div>
+            <div class="shortDescr">
+                <div>Иоган Готлиб Фихте</div>
+                <div class="category">Бочкообразные</div>
+                <div>Stars</div>
+                <div>cost</div>
+            </div>
+            <div class="longDescr"><p>Повседневная практика показывает, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.</p>
+                <p>Таким образом реализация намеченных плановых заданий позволяет оценить значение новых предложений.</p>
+                <p>С другой стороны рамки и место обучения кадров способствует подготовки и реализации модели развития.</p>
+                <p>Товарищи! сложившаяся структура организации представляет собой интересный эксперимент проверки направлений прогрессивного развития.</p></div>
         </section>
+        
         <section>
-            <img src="cat6.jpg">
+            <div class="image_container"><img src="cat6.jpg" alt=""></div>
+            <div class="shortDescr">
+                <div>Августин Блаженный</div>
+                <div class="category">Дикие</div>
+                <div>Stars</div>
+                <div>cost</div>
+            </div>
+            <div class="longDescr"><p>Интеллект естественно понимает под собой интеллигибельный закон внешнего мира, открывая новые горизонты. </p></div>
         </section>
+        
         <section>
-            <img src="cat7.jpg">
+            <div class="image_container"><img src="cat7.jpg" alt=""></div>
+            <div class="shortDescr">
+                <div>Елизавета Петровна Блаватская </div>
+                <div class="category">Воспитанные</div>
+                <div>Stars</div>
+                <div>cost</div>
+            </div>
+            <div class="longDescr"><p>Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.</p>
+                <p>Разнообразный и богатый опыт консультация с широким активом обеспечивает широкому кругу.</p>
+                <p>Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение модели развития.</p>
+                <p>Если у вас есть какие то интересные предложения, обращайтесь! Студия Web-Boss всегда готова решить любую задачу.</p></div>
         </section>
+        
         <section>
-            <img src="cat8.jpg">
+            <div class="image_container"><img src="cat8.jpg" alt=""></div>
+            <div class="shortDescr">
+                <div>Эдмунд Гуссерль</div>
+                <div class="category">Не мурчащие</div>
+                <div>Stars</div>
+                <div>cost</div>
+            </div>
+            <div class="longDescr"><p>Равным образом постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям.</p>
+                <p>Если у вас есть какие то интересные предложения, обращайтесь! Студия Web-Boss всегда готова решить любую задачу.</p></div>
         </section>
+        
         <section>
-            <img src="cat9.jpg">
+            <div class="image_container"><img src="cat9.jpg" alt=""></div>
+            <div class="shortDescr">
+                <div>Николло Макиавелли </div>
+                <div class="category">Приученные к лотку</div>
+                <div>Stars</div>
+                <div>cost</div>
+            </div>
+            <div class="longDescr"><p>Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке модели развития.</p>
+                <p>Товарищи! консультация с широким активом позволяет выполнять важные задания по разработке систем массового участия.</p></div>
         </section>
+        
         <section>
-            <img src="cat10.jfif">
+            <div class="image_container"><img src="cat10.jfif" alt=""></div>
+            <div class="shortDescr">
+                <div>Мигель Де Унамуно</div>
+                <div class="category">Всеядные</div>
+                <div>Stars</div>
+                <div>cost</div>
+            </div>
+            <div class="longDescr"><p>Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.</p></div>
         </section>
+    
     </main>
     
-    <footer>
-
+    <footer id="mya2">
+       Mяндекс, 2020 год
     </footer>
-</div>
 </body>
 </html>

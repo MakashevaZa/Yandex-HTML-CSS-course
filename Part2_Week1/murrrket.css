@@ -1,43 +1,110 @@
-
+/* -----------Общий фон ----------------*/
 body{
     padding: 0;
     margin: 0;
     background-color: rgba(247, 151, 107, 0.726);
     text-align: center;
-}
 
-h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/*----------------Header----------------*/
+header h1{
     margin: 0 30px 15px ;
     padding: 1% 1%;
-    background-color: black;
-    color: white;
-    opacity: .6;
-}
-p{
-    margin: 0 30px;
-    padding: 1% 5%;
-    background-color: rgba(247, 151, 107, 0.726);
+    background-color: rgba(0, 0, 0, .6);
     color: white;
     
-}
-header{
-    background-image: url("header.jpg");
-    background-size: cover;
-    
-    text-align: center;
-    width: 700px;
-    border: 2px red;
-    padding: 25px 40px;
-    margin: 50px auto 0;
 }
 
+#mya2::first-letter, #mya::first-letter{
+    color: red;
+}
+
+header p{
+    margin: 0 30px;
+    padding: 1% 5%;
+    background-color: rgba(247, 151, 107, 0.826);
+    color: white;
+}
+
+header{
+    background-image: url("header-1.jpg");
+    background-size: cover;    
+    text-align: center;
+    width: 700px;
+    border: 4px solid rgba(247, 151, 107, 1);
+    padding: 25px 40px;
+    margin: 50px auto 0;
+    }
+
+/*-----------Main-------------*/
+
+main > p {
+    width: 200px;
+    margin: 10px auto;
+    background-color: rgba(247, 151, 107, 0.726);
+    color: white;
+}
+
+/*--------Listing function ---------*/
+.listing{
+    position: absolute;
+    font-size: 0;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+}
+
+.label-for-listing.plitka::before{
+    content: '\e802';
+    color: white;
+    font-size: 25px;
+    font-family: Fontello;
+    
+}
+input:checked + .label-for-listing::before{
+    color: rgba(247, 151, 107, 0.826);
+}
+.label-for-listing.list::before{
+    content: '\e803';
+    color: white;
+    font-size: 25px;
+    font-family: Fontello;
+}
+
+
+/*----------Sections-----------*/
 section{
     display: inline-block;
-    width: 350px;
-    height: 400px;
+    /*background-color: rgba(247, 151, 107, 0.8);*/
+    background-color: whitesmoke;
+    opacity: .8;
+    
     margin: 20px;
     padding: 20px 0;
+    vertical-align: text-top;
+
 }
+
+#list:checked ~ section {
+    width:80%;
+}
+
+#list:checked ~ section > div{
+    display: inline-block;    
+    width: 30%;
+}
+
+#plitka:checked ~ section{
+    width: 350px;
+}
+
 section img{
     object-fit: cover;
     overflow: hidden;
@@ -46,17 +113,189 @@ section img{
     width: 300px;  
 }
 
-section:nth-child(10n+8) img {
+section:nth-of-type(10n+8) img {
     object-position: 86% 80%;
 }
-
-section:nth-child(10n+2) img {
-    object-position: 80% 80%;
+section:nth-of-type(10n+2) img {
+    object-position: 80% 80%;    
 }
-section:nth-child(10n+7) img {
+section:nth-of-type(10n+7) img {
     object-position: 20% 100%;
 }
-
+.name{
+    padding: 20px ;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 600;
+}
+.shortDescr, .longDescr {
+    vertical-align: top;
+}
+.longDescr{
+    text-align: justify;
+    padding: 20px;
+}
+/*------Hover and changes------*/
 section img:hover{
     opacity: .7;
+}
+section .image_container:hover + div div:first-child{
+    color: red;
+}
+
+/*--------Footer text------------*/
+footer{
+    padding: 30px;    
+    background-color: rgba(247, 151, 107, 0.8);
+    color: whitesmoke;
+    margin: 0;
+}
+
+
+/*------Rating--------*/
+
+/*
+.card-rating {
+    font-size: 0;
+    
+}
+
+.card-rating_wrap {
+    display: inline-block;
+    font-size: 18px;
+}
+
+.visually-hidden {
+    display: none;
+}
+
+.card-rating_label {
+    float: right;
+   padding: 0;
+    margin: 0;
+    border: none;
+    top: 0;
+}
+
+
+
+
+
+
+.card-rating_label:before {
+    display: inline-block;
+    margin: 0;
+    padding: 3px;
+
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, .3),
+                -1px -1px 3px  rgba(0, 0, 0, .1);
+}
+
+.half:before {
+    position: absolute;
+    padding-right: 0;
+    cursor: pointer;
+}
+
+.full:hover:before,
+.icon-star:hover~.icon-star:before,
+.card-rating_input:checked~.icon-star.full:before {
+    content: '\e800';
+    cursor: pointer;
+    color: #FFB300;
+}
+
+.card-rating_input:checked + .icon-star.half:before,
+.half:hover:before {
+    content: '\f123';
+    color: #FFB300;
+}
+
+
+.half:hover:before,
+.card-rating_input:checked .icon-star.half:before
+{
+    content: '\f123';
+    color: #FFB300;
+}
+
+.icon-star.full:hover:before,
+.card-rating_input:checked ~ .card-rating_label.icon-star:before
+{
+    content: '\e800';
+    cursor: pointer;
+    color: #FFB300;
+}
+
+.icon-star.full:hover ~ .icon-star.half:before,
+.card-rating_input:checked ~ .icon-star.half:before
+{
+    opacity: 0;
+}
+
+
+{
+    content: '\f123';
+    color: #FFB300;
+}
+*/
+
+.card-rating_wrap
+{
+    margin: 10px 0;
+    display: inline-block;
+    font-size: 24px;
+}
+
+.card-rating_wrap input
+{
+    display: none;
+    font-size: 12px;
+}
+
+.card-rating_wrap label
+{
+    float: right;
+    cursor: pointer;    
+    color: #fff;
+    font-size: 24px;
+    
+}
+
+.card-rating_wrap .full::before
+{
+    content: '\e800';
+    text-shadow: 0 0 3px #000;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.card-rating_wrap .half::before
+{
+    content: '\f123';
+    position: absolute;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.card-rating_wrap input:checked ~ label
+{
+    color: #fc0;
+}
+
+.card-rating_wrap label:hover,
+.card-rating_wrap label:hover ~ label
+{
+    color: #ffe685 !important;
+}
+
+.card-rating_wrap label:active::before,
+.card-rating_wrap label:active ~ label::before
+{
+    color: #ff8400;
 }
